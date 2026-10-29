@@ -9,7 +9,7 @@ QuickNotes is moving from a browser-only app to an online service for 1 million 
 
 No install or build step is needed.
 
-1. Clone the repository: `git clone https://github.com/<your-username>/quicknotes-system-design.git`
+1. Clone the repository: `git clone https://github.com/<muli-joe>/quicknotes-system-design.git`
 2. Open `index.html` in a browser (double-click it), or run a local server: `python3 -m http.server 8000` and visit <http://localhost:8000>.
 3. Click **Load notes** to fetch 10 notes (GET).
 4. Fill in the form and click **Create note** (POST). The title is required, up to 100 characters.
