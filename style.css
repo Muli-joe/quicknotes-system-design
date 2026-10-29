@@ -1,0 +1,164 @@
+:root {
+  --bg: #eef1f5;
+  --surface: #ffffff;
+  --ink: #1c2530;
+  --muted: #5b6776;
+  --accent: #2f5fd0;
+  --accent-dark: #2249a6;
+  --border: #cfd6df;
+  --success-bg: #e3f4e8;
+  --success-ink: #14532d;
+  --success-border: #8cc9a1;
+  --error-bg: #fbe6e5;
+  --error-ink: #8a1c18;
+  --error-border: #e39a97;
+  --loading-bg: #fff4cc;
+  --loading-ink: #5a4a00;
+  --loading-border: #e6cf75;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  line-height: 1.5;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+main {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+h1 {
+  margin: 0 0 0.25rem;
+}
+h2 {
+  font-size: 1.1rem;
+  margin: 0 0 0.75rem;
+}
+.intro {
+  margin: 0 0 1.5rem;
+  color: var(--muted);
+}
+
+button {
+  font: inherit;
+  padding: 0.5rem 1rem;
+  border: 0;
+  border-radius: 6px;
+  color: #fff;
+  background: var(--accent);
+  cursor: pointer;
+}
+button:hover:not(:disabled) {
+  background: var(--accent-dark);
+}
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #9db7f2;
+  outline-offset: 2px;
+}
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+#status {
+  min-height: 1.5rem;
+  margin: 1rem 0;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid transparent;
+}
+#status:empty {
+  padding: 0;
+  border: 0;
+}
+#status.loading {
+  background: var(--loading-bg);
+  color: var(--loading-ink);
+  border-color: var(--loading-border);
+}
+#status.success {
+  background: var(--success-bg);
+  color: var(--success-ink);
+  border-color: var(--success-border);
+}
+#status.error {
+  background: var(--error-bg);
+  color: var(--error-ink);
+  border-color: var(--error-border);
+}
+
+form {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+label {
+  display: block;
+  margin: 0.75rem 0 0.25rem;
+  font-weight: 600;
+}
+input,
+textarea {
+  width: 100%;
+  font: inherit;
+  padding: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+form button {
+  margin-top: 1rem;
+}
+
+#notes-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+.note {
+  padding: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+.note h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.05rem;
+}
+.note p {
+  margin: 0 0 0.75rem;
+  color: var(--muted);
+  white-space: pre-line;
+}
+.delete-btn {
+  background: #b3261e;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.9rem;
+}
+.delete-btn:hover:not(:disabled) {
+  background: #8c1d17;
+}
+.empty-state {
+  padding: 1.5rem;
+  text-align: center;
+  color: var(--muted);
+  border: 2px dashed var(--border);
+  border-radius: 8px;
+}
